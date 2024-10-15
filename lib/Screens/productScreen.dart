@@ -28,7 +28,7 @@ class _ProductScreenState extends State<ProductScreen> {
   @override
   void initState() {
     super.initState();
-    filteredProducts = products; // Initially show all products
+    filteredProducts = products;
   }
 
   void updateSearchQuery(String query) {
@@ -51,19 +51,19 @@ class _ProductScreenState extends State<ProductScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // User info section
+
             UserInfoCard(
               userName: 'UserName',
               userLocation: 'User Location',
               cartItemCount: '02',
               screenUtils: screenUtils,
             ),
-            // Search bar section
+
             SearchBarCard(
               updateSearchQuery: updateSearchQuery,
               screenUtils: screenUtils,
             ),
-            // Horizontal categories scrollable row
+
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -79,9 +79,9 @@ class _ProductScreenState extends State<ProductScreen> {
                 ],
               ),
             ),
-            // Product grid with fixed height to make it scrollable within the page
+
             SizedBox(
-              height: screenUtils.h(0.5), // Adjust height based on your layout
+              height: screenUtils.h(0.5),
               child: ProductGrid(
                 products: filteredProducts,
               ),

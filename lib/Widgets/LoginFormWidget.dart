@@ -12,7 +12,7 @@ class LoginForm extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          // Email TextField
+
           TextField(
             decoration: InputDecoration(
               labelText: 'Email Address',
@@ -24,13 +24,13 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: screenutils.h(0.02)),
 
-          // Password TextField
+
           TextField(
             obscureText: true,
             decoration: InputDecoration(
               labelText: 'Password',
               prefixIcon: Icon(Icons.lock),
-              suffixIcon: Icon(Icons.visibility), // Toggle visibility
+              suffixIcon: Icon(Icons.visibility),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -38,7 +38,7 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: screenutils.h(0.02)),
 
-          // Forgot Password and Remember Me
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -50,7 +50,7 @@ class LoginForm extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  // Forgot password logic
+
                 },
                 child: Text('Forgot Password?'),
               ),
@@ -58,11 +58,11 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: screenutils.h(0.03)),
 
-          // Login Button
+
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: screenutils.h(0.02)),
-              backgroundColor: Colors.green, // Login button color
+              backgroundColor: Colors.green,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),

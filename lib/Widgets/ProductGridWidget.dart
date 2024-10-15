@@ -31,10 +31,10 @@ class ProductGrid extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: isTablet ? 3 : 2, // Responsive columns
+            crossAxisCount: isTablet ? 3 : 2,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            childAspectRatio: isTablet ? 0.8 : 0.7, // Adjust aspect ratio
+            childAspectRatio: isTablet ? 0.8 : 0.7,
           ),
           itemCount: products.length,
           itemBuilder: (context, index) {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../ScreenSize/screenUtils.dart';
 
-// UserInfoCard Widget
+
 class UserInfoCard extends StatelessWidget {
   final String userName;
   final String userLocation;
@@ -21,7 +21,7 @@ class UserInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: screenUtils.h(0.02), // Dynamic padding based on height
+        vertical: screenUtils.h(0.02),
         horizontal: screenUtils.w(0.04),
       ),
       child: Container(
@@ -29,10 +29,10 @@ class UserInfoCard extends StatelessWidget {
         child: Card(
           elevation: 2,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0), // Rounded corners
+            borderRadius: BorderRadius.circular(12.0),
           ),
           child: Padding(
-            padding: EdgeInsets.all(screenUtils.isTablet ? 15.0 : 12.0), // Adjust padding for tablet
+            padding: EdgeInsets.all(screenUtils.isTablet ? 15.0 : 12.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -42,16 +42,16 @@ class UserInfoCard extends StatelessWidget {
                     Text(
                       userName,
                       style: TextStyle(
-                        fontSize: screenUtils.sp(screenUtils.isTablet ? 0.02 : 0.05), // Dynamic font size
+                        fontSize: screenUtils.sp(screenUtils.isTablet ? 0.02 : 0.05),
                         fontFamily: 'monaSans/MonaSans-Black.ttf',
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    SizedBox(height: screenUtils.h(0.001)), // Add vertical space
+                    SizedBox(height: screenUtils.h(0.001)),
                     Text(
                       userLocation,
                       style: TextStyle(
-                        fontSize: screenUtils.sp(screenUtils.isTablet ? 0.012 : 0.025), // Dynamic font size for tablets
+                        fontSize: screenUtils.sp(screenUtils.isTablet ? 0.012 : 0.025),
                         fontFamily: 'monaSans/MonaSans-SemiBold.ttf',
                         fontWeight: FontWeight.w400,
                         color: Colors.grey,
@@ -61,7 +61,7 @@ class UserInfoCard extends StatelessWidget {
                 ),
                 Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                   elevation: 2,
                   child: Padding(
@@ -70,14 +70,14 @@ class UserInfoCard extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.shopping_bag_outlined,
-                          size: screenUtils.w(screenUtils.isTablet ? 0.025 : 0.06), // Adjust size for tablets
+                          size: screenUtils.w(screenUtils.isTablet ? 0.025 : 0.06),
                           color: Colors.green,
                         ),
-                        SizedBox(width: screenUtils.w(0.01)), // Spacing between icon and text
+                        SizedBox(width: screenUtils.w(0.01)),
                         Text(
                           cartItemCount,
                           style: TextStyle(
-                            fontSize: screenUtils.sp(screenUtils.isTablet ? 0.025 : 0.07), // Adjust font size
+                            fontSize: screenUtils.sp(screenUtils.isTablet ? 0.025 : 0.07),
                             fontFamily: 'monaSans/MonaSans-SemiBold.ttf',
                             fontWeight: FontWeight.w700,
                             color: Colors.green,
@@ -118,18 +118,18 @@ class SearchBarCard extends StatelessWidget {
         height: screenUtils.isTablet ? 60 : 50,
         child: Card(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0), // Rounded corners
+            borderRadius: BorderRadius.circular(12.0),
           ),
           child: Padding(
-            padding: EdgeInsets.all(screenUtils.isTablet ? 12.0 : 12), // Adjust padding for tablets
+            padding: EdgeInsets.all(screenUtils.isTablet ? 12.0 : 12),
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
                 border: InputBorder.none,
-                suffixIcon: Icon(Icons.search, size: screenUtils.isTablet ? 20.0 : 20), // Adjust icon size
+                suffixIcon: Icon(Icons.search, size: screenUtils.isTablet ? 20.0 : 20),
                 contentPadding: EdgeInsets.symmetric(
                   vertical: screenUtils.h(screenUtils.isTablet ? 0.01 : 0.01),
-                ), // Adjust padding for larger screens
+                ),
               ),
               onChanged: updateSearchQuery,
             ),

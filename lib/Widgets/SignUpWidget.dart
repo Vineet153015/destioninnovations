@@ -11,7 +11,7 @@ class SignupForm extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          // Email TextField
+
           TextField(
             decoration: InputDecoration(
               labelText: 'Email Address',
@@ -23,7 +23,7 @@ class SignupForm extends StatelessWidget {
           ),
           SizedBox(height: screenutils.h(0.02)),
 
-          // Password TextField
+
           TextField(
             obscureText: true,
             decoration: InputDecoration(
@@ -37,7 +37,7 @@ class SignupForm extends StatelessWidget {
 
           SizedBox(height: screenutils.h(0.02)),
 
-          // Password TextField
+
           TextField(
             obscureText: true,
             decoration: InputDecoration(
@@ -51,7 +51,7 @@ class SignupForm extends StatelessWidget {
 
           SizedBox(height: screenutils.h(0.02)),
 
-          // Password TextField
+
           TextField(
             obscureText: true,
             decoration: InputDecoration(
@@ -69,7 +69,7 @@ class SignupForm extends StatelessWidget {
             decoration: InputDecoration(
               labelText: 'Confirm Password',
               prefixIcon: Icon(Icons.lock),
-              suffixIcon: Icon(Icons.visibility), // Toggle visibility
+              suffixIcon: Icon(Icons.visibility),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -90,7 +90,7 @@ class SignupForm extends StatelessWidget {
           SizedBox(height: screenutils.h(0.02)),
 
 
-          // Login Button
+
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: screenutils.h(0.02)),
@@ -100,7 +100,7 @@ class SignupForm extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              // Login button logic
+
             },
             child: Center(
               child: Text(

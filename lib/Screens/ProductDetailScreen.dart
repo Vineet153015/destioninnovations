@@ -22,55 +22,55 @@ class ProductDetailPage extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // Centers the column content
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image - Adjust size and layout based on orientation
+
               Padding(
-                padding: EdgeInsets.all(screenUtils.w(0.05)), // 5% of the screen width padding
+                padding: EdgeInsets.all(screenUtils.w(0.05)),
                 child: AspectRatio(
-                  aspectRatio: screenUtils.isPortrait ? 1 : 2, // Square in portrait, wider in landscape
+                  aspectRatio: screenUtils.isPortrait ? 1 : 2,
                   child: Image.asset(
                     product.imageUrl,
-                    width: screenUtils.isPortrait ? screenUtils.w(0.8) : screenUtils.w(0.6), // Image width based on orientation
-                    height: screenUtils.isPortrait ? screenUtils.h(0.4) : screenUtils.h(0.3), // Image height based on orientation
+                    width: screenUtils.isPortrait ? screenUtils.w(0.8) : screenUtils.w(0.6),
+                    height: screenUtils.isPortrait ? screenUtils.h(0.4) : screenUtils.h(0.3),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
           
-              // Product name with responsive font size and layout based on orientation
+
               Padding(
-                padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.02)), // 2% vertical padding
+                padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.02)),
                 child: Text(
                   product.name,
                   style: TextStyle(
-                    fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.06 : 0.05), // Font size larger in portrait mode
+                    fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.06 : 0.05),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
           
-              // Product price with responsive font size based on orientation
+
               Padding(
-                padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.01)), // 1% vertical padding
+                padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.01)),
                 child: Text(
                   '\$${product.price}',
                   style: TextStyle(
-                    fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.05 : 0.04), // Font size smaller in landscape
+                    fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.05 : 0.04),
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
           
-              // Discounted price with responsive font size (if any)
+
               if (product.discount != null)
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.01)), // 1% vertical padding
+                  padding: EdgeInsets.symmetric(vertical: screenUtils.h(0.01)),
                   child: Text(
                     '\$${product.discount}',
                     style: TextStyle(
-                      fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.045 : 0.04), // Adjust based on orientation
+                      fontSize: screenUtils.sp(screenUtils.isPortrait ? 0.045 : 0.04),
                       decoration: TextDecoration.lineThrough,
                       color: Colors.red,
                     ),
